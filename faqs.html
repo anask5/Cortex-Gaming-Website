@@ -17,13 +17,14 @@
         <nav>
             <div class="nav-left">
                 <ul>
-                    <li><button><a href="/index.html">Home</a></button></li>
-                    <li><button><a href="/about-us.html">About Us </a></button></li>
-                    <li><button><a href="/newsletter.html">News</a></button></li>
-                    <li><button><a href="/faqs.html">FAQs</a></button></li>
-                </ul>
+                    <li><a href="/index.html"><button>Home</button></a></li>
+                    <!--yeh button tag add kiya hai hover ke liye-->
+                    <li><a href="/about-us.html"><button>About Us</button></a></li>
+                    <li><a href="/newsletter.html"><button>News</button></a></li>
+                    <li><a href="/faqs.html"><button>FAQs</button></a></li>
                 </ul>
             </div>
+
 
             <div class="nav-right">
                 <a href="/login.html" class="btn btn-login"><button>Login</button></a>
@@ -46,6 +47,14 @@
                 <summary>Are there any rules I need to follow?</summary>
                 <p>Yes. We expect all members to be respectful and inclusive. Harassment, cheating, and spam are strictly prohibited. You can find our full code of conduct on the forums.</p>
             </details>
+            <details>
+                <summary>What happens if I break a rule?</summary>
+                <p>Our moderation team reviews all reports. Depending on the severity of the violation, you may receive a warning, a temporary suspension, or a permanent ban from our platform to ensure the community remains safe and respectful for everyone.</p>
+            </details>
+            <details>
+                <summary>How do I get a special role (e.g., "Veteran," "Content Creator") on Discord?</summary>
+                <p>Special roles are typically assigned based on community involvement, content contributions, or participation in events. Keep an eye on the "#announcements" channel in Discord for information on how to apply for or earn these roles.</p>
+            </details>
 
             <h2 class="faq-category">Esports</h2>
             <details>
@@ -60,6 +69,18 @@
                 <summary>Where can I find the tournament schedule?</summary>
                 <p>The complete schedule for all upcoming tournaments and community events is available on our Events page and is regularly updated.</p>
             </details>
+            <details>
+                <summary>I don't want to compete. How can I watch the tournament matches?</summary>
+                <p>All our major tournament finals are live-streamed! You can find the schedule and links to our official Twitch and YouTube channels on the "Events" page.</p>
+            </details>
+            <details>
+                <summary>Are there prizes for winning tournaments?</summary>
+                <p>Yes! Most of our official tournaments feature prizes, which can include cash, exclusive digital items, gaming gear, or special roles in the community. All prize details are listed on the specific tournament's sign-up page.</p>
+            </details>
+            <details>
+                <summary>Can I start my own team or "Guild"?</summary>
+                <p>Absolutely! We encourage members to form their own teams. You can use our "Looking for Group" forum to find teammates and register your team for upcoming community-run events.</p>
+            </details>
 
             <h2 class="faq-category">Technical Support</h2>
             <details>
@@ -70,23 +91,27 @@
                 <summary>I found a bug on the website. Where do I report it?</summary>
                 <p>We appreciate your help! Please report any bugs or technical issues in the #bug-reports channel on our Discord server, and our development team will look into it.</p>
             </details>
-
-            <section class="chatbot-section">
-                <h2>Still Have Questions?</h2>
-                <p>Our AI assistant is here to help you find answers instantly.</p>
-                <div class="chatbot-container">
-                    <div class="chat-messages">
-                        <div class="message bot-message">Hello! How can I help you today?</div>
-                    </div>
-                    <div class="chat-input-area">
-                        <input type="text" placeholder="Type your question here...">
-                        <button>Send</button>
-                    </div>
-                </div>
-            </section>
+            <details>
+                <summary>How do I delete my account?</summary>
+                <p>We're sorry to see you go! To request the permanent deletion of your account and personal data, please send an email to Support@Cortex.in from the email address associated with your account.</p>
+            </details>
+            <h2 class="faq-category">Community & Content</h2>
+            <details>
+                <summary>How do I post on the forums?</summary>
+                <p>Once you are logged in, navigate to the "Forums" section, choose a category you're interested in (like "Valorant" or "General Discussion"), and look for a button that says "New Post" or "Create Thread.</p>
+            </details>
+            <details>
+                <summary>Can I promote my Twitch or YouTube channel on this site?</summary>
+                <p>Yes! We have a dedicated "Content Creators" section on our forums and a "#self-promotion" channel in Discord. Please do not spam your links in unrelated forums or channels.</p>
+            </details>
         </div>
     </main>
-
+    <div id="footer-placeholder"></div>
+    <!-- script is used to make a loading screen before the actual content goes on and etc-->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/loader.js"></script>
+    <script src="scripts/stats.js"></script>
+    <!-- this is the script which uses the api used to give the AI powered chatbot -->
     <script src="//code.tidio.co/a3atkmmrwpfyw65tdi35zh9pjfrccflx.js" async></script>
 
 </body>

@@ -1,11 +1,328 @@
-/* === this is for the custom font we used we import it from fonts folder=== */
+/* === Mouse-Following Card Glow Effect === */
 
-@font-face {
-    font-family: 'font1';
-    /* This is the name YOU invent */
-    src: url('/fonts/ringm___-webfont.woff') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+.glow-card {
+    position: relative;
+    /* Required for the pseudo-element */
+    overflow: hidden;
+    /* Keeps the glow inside the card's bounds */
+}
+
+.glow-card::before {
+    content: '';
+    position: absolute;
+    /* Use CSS variables for position, default to center */
+    top: var(--y, 50%);
+    left: var(--x, 50%);
+    /* Center the glow on the cursor */
+    transform: translate(-50%, -50%);
+    width: 300px;
+    /* Size of the glow */
+    height: 300px;
+    /* Size of the glow */
+    /* The radial gradient is the glow itself */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), /* Center color */
+    transparent 70%/* Fades to transparent */
+    );
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease-out;
+}
+
+
+/* When you hover the card, make the glow visible */
+
+.glow-card:hover::before {
+    opacity: 1;
+}
+
+
+/* === Reaction Time Tester === */
+
+.reaction-container {
+    max-width: 800px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+#reaction-box {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    user-select: none;
+    /* Prevents text highlighting */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#reaction-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+}
+
+.reaction-instructions {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-top: 20px;
+}
+
+
+/* --- State Styles --- */
+
+
+/* 1. Default/Waiting state */
+
+#reaction-box.waiting {
+    background-color: #3498db;
+    /* Blue */
+}
+
+
+/* 2. "Wait for it..." state */
+
+#reaction-box.ready {
+    background-color: #e74c3c;
+    /* Red */
+}
+
+
+/* 3. "Go!" state */
+
+#reaction-box.go {
+    background-color: #2ecc71;
+    /* Green */
+}
+
+
+/* 4. "Too soon!" state */
+
+#reaction-box.fail {
+    background-color: #e74c3c;
+    /* Red */
+}
+
+
+/* === Quiz Page Styles === */
+
+.quiz-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+}
+
+.quiz-container h1 {
+    text-align: center;
+    color: #e50914;
+}
+
+.quiz-container p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.quiz-question {
+    margin-bottom: 25px;
+}
+
+.quiz-question label {
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.quiz-option {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+}
+
+.quiz-option input {
+    margin-right: 10px;
+}
+
+
+/* --- Quiz Result Styling --- */
+
+#quiz-result {
+    text-align: center;
+}
+
+#result-title {
+    font-size: 2.5em;
+    color: #e50914;
+    /* Your red accent */
+}
+
+#result-description {
+    font-size: 1.2em;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+
+/* === MOBILE RESPONSIVENESS - FIXED VERSION === */
+
+
+/* For tablets and mobile phones */
+
+@media (max-width: 768px) {
+    /* 1. Fix header */
+    header {
+        padding: 15px 15px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.95);
+        box-sizing: border-box;
+        height: 70px;
+    }
+    /* 2. Navigation */
+    .nav-left ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .nav-left ul li {
+        display: inline-block;
+        margin: 0 8px;
+    }
+    /* 3. Main container - enough space for header */
+    .main-container {
+        padding-top: 100px;
+        margin-top: 0;
+        min-height: 100vh;
+    }
+    .main-container main {
+        height: auto;
+        padding: 20px 10px;
+        margin-top: 0;
+    }
+    /* 4. Registration form - scrollable if too tall */
+    .registration-container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 25px;
+        position: relative;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.85);
+        border-radius: 10px;
+        max-height: 75vh;
+        /* Limit height */
+        overflow-y: auto;
+        /* Add scroll if needed */
+    }
+    /* 5. Ensure ALL form content is visible */
+    .registration-form {
+        display: block;
+        width: 100%;
+    }
+    .registration-form .form-group {
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .registration-form label {
+        display: block;
+        color: white;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+    /*         .registration-form input,
+        .registration-form select {
+                NOTE: These styles were moved to the global
+                'Unified Form Field Styles' section for consistency.
+        } 
+    */
+    /* 6. Button */
+    .submit-btn {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        background-color: #e50914;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    /* 7. Footer */
+    .footer-content-wrapper {
+        display: block;
+    }
+    .footer-about,
+    .footer-links,
+    .footer-social {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    /* 8. Background */
+    .video-background video {
+        display: none;
+    }
+    .video-background {
+        background: #1a1a2e;
+    }
+}
+
+
+/* For very small phones */
+
+@media (max-width: 480px) {
+    header {
+        padding: 12px 10px;
+        height: 65px;
+    }
+    .main-container {
+        padding-top: 90px;
+    }
+    .registration-container {
+        width: 95%;
+        /* padding: 20px; -- This is now handled by clamp() */
+        max-height: 70vh;
+        /* Slightly less height on small phones */
+    }
+    /*     .registration-container h1 {
+          font-size: 1.3rem; -- This is now handled by clamp()
+    } 
+    */
+    .nav-left ul li {
+        margin: 0 5px;
+    }
+    .nav-left a {
+        font-size: 13px;
+    }
+}
+
+
+/* For landscape mode */
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .main-container {
+        padding-top: 80px;
+    }
+    .registration-container {
+        max-height: 65vh;
+        /* Less height in landscape */
+        margin: 10px auto;
+    }
+    header {
+        height: 60px;
+        padding: 10px 15px;
+    }
 }
 
 
@@ -18,24 +335,30 @@ h3 {
 }
 
 
-/* === Global Styles === */
+/* === this is for the custom font we used we import it from fonts folder=== */
+
+@font-face {
+    font-family: 'font1';
+    /* This is the name YOU invent */
+    src: url('/fonts/ringm___-webfont.woff') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* === Global Styles for Custom Cursor === */
 
 html {
     scroll-behavior: smooth;
     /* ADD YOUR CURSOR CODE HERE */
-    cursor: url('/assets/arrowhead2.svg'), auto;
+    cursor: url('/assets/arrowhead.svg'), auto;
 }
 
 
-/* faqs layout fixed */
+/* faqs layout gap fixed */
 
 .faqs2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150vh;
-    /* Takes up most of the screen height */
-    text-align: center;
+    height: 2100px;
 }
 
 
@@ -46,15 +369,145 @@ html {
 }
 
 
-/* news layout fixed */
+/* news gap layout fixed */
 
 .newsh {
+    height: 1070px;
+}
+
+
+/* === Cookie Consent Banner === */
+
+#cookie-banner {
+    position: fixed;
+    /* Sticks to the viewport */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* --- CHANGED THIS --- */
+    background-color: rgba(0, 0, 0, 0.75);
+    /* Semi-transparent background */
+    color: #ccc;
+    padding: 15px;
+    /* --- REMOVED THIS --- */
+    /* box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); */
+    /* Removed shadow for a flatter look */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    /* Takes up most of the screen height */
-    text-align: center;
+    gap: 20px;
+    /* Space between text and button */
+    z-index: 1000;
+    /* Ensures it's on top of other content */
+    /* Smooth transition for appearing */
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+/* This class makes the banner slide up into view */
+
+#cookie-banner.cookie-banner-visible {
+    transform: translateY(0);
+}
+
+#cookie-banner p {
+    margin: 0;
+    font-size: 15px;
+}
+
+#cookie-banner .btn {
+    background-color: #e50914;
+    /* Your red accent color */
+    padding: 8px 18px;
+    flex-shrink: 0;
+    /* Prevents button from shrinking */
+}
+
+
+/* Initially hide the banner completely */
+
+.cookie-banner-hidden {
+    display: none;
+}
+
+
+/* --- Custom Styling for Dropdown Menus --- */
+
+
+/* === Unified Form Field Styles === */
+
+
+/* This one rule targets all your form fields at once */
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group select {
+    /* 1. Remove default browser looks */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* 2. Set transparent background and text color */
+    background-color: rgba(0, 0, 0, 0.75);
+    /* Semi-transparent */
+    color: #fff;
+    /* White text */
+    /* 3. Set consistent sizing and borders */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+    /* Use the body's font */
+    font-size: 1em;
+}
+
+
+/* 4. Add back the custom arrow for SELECT dropdowns */
+
+.form-group select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 10px 10px;
+}
+
+
+/* 5. Style the dropdown options list */
+
+.form-group select option {
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* 6. Fix the DATE input's placeholder and icon */
+
+
+/* This styles the "mm/dd/yyyy" placeholder text */
+
+.form-group input[type="date"] {
+    color: #999;
+}
+
+
+/* This styles the text *after* a date is selected */
+
+.form-group input[type="date"]:valid {
+    color: #fff;
+    /* White text when valid */
+}
+
+
+/* This makes the calendar icon white */
+
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    /* A simple trick to turn the black icon white */
+    cursor: pointer;
 }
 
 
@@ -193,7 +646,179 @@ nav a {
 
 /* Main content styling to center it */
 
-main {
+
+/* === Server Status Indicator === */
+
+.server-status {
+    display: flex;
+    /* Lines up the dot and text */
+    align-items: center;
+    /* Vertically centers them */
+    margin-right: 20px;
+    /* Space from the login button */
+    color: #ccc;
+    /* Light grey text */
+    font-size: 15px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #2ecc71;
+    /* A bright green color */
+    border-radius: 50%;
+    /* Makes it a perfect circle */
+    margin-right: 8px;
+    /* Space from the text */
+    /* This adds the pulsing animation */
+    animation: pulse 2s infinite;
+    /* Adds a soft glow */
+    box-shadow: 0 0 8px #2ecc71;
+}
+
+
+/* This is the animation keyframe */
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(46, 204, 113, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+    }
+}
+
+.nav-right {
+    display: flex;
+    /* This is the main fix: makes children align in a row */
+    align-items: center;
+    /* This vertically centers all items (dot, text, buttons) */
+}
+
+
+/* === Stats Counter Section === */
+
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1000px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 3.5em;
+    color: #e50914;
+    /* Your red accent color */
+    margin: 0;
+}
+
+.stat-item p {
+    font-size: 1.2em;
+    color: #ccc;
+    margin: 0;
+}
+
+
+/* === Discord CTA Section === */
+
+.discord-cta {
+    /* background-color: rgba(0, 0, 0, 0.75); -- REMOVED */
+    padding: 50px 20px;
+    margin-top: 100px;
+    /* Space from content above */
+    text-align: center;
+    /* border-top: 3px solid #e50914; -- REMOVED */
+    /* border-bottom: 3px solid #e50914; -- REMOVED */
+    /* border-radius: 10px; -- REMOVED */
+}
+
+.discord-cta h2 {
+    font-size: 2.5em;
+    margin: 0 0 15px 0;
+    color: #fff;
+}
+
+.discord-cta p {
+    font-size: 1.2em;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+}
+
+.btn-discord {
+    background-color: #7289DA;
+    /* Discord's brand color */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-discord:hover {
+    background-color: #5f73bc;
+}
+
+
+/* === Testimonial Carousel === */
+
+.testimonial-carousel {
+    /* Adjust this value to push it down as much as you want */
+    margin-top: 100px;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    /* This pair keeps it centered */
+    margin-right: auto;
+    /* This pair keeps it centered */
+    padding: 20px;
+    position: relative;
+    /* Container for absolute children */
+    min-height: 200px;
+}
+
+.testimonial-carousel h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.testimonial-carousel {
+    position: relative;
+    text-align: center;
+    font-size: 1.5em;
+    /* Container for absolute children */
+    min-height: 200px;
+    /* So it has space */
+    /* ... other styles ... */
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 1s ease-in-out;
+    /* Smooth fade */
+}
+
+.carousel-slide.active-slide {
+    opacity: 1;
+    /* Visible */
+}
+
+homepage-main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,6 +840,89 @@ main {
 
 
 /* Footer styling */
+
+
+/* === Sponsor Logo Carousel === */
+
+
+/* 1. The Animation Keyframes */
+
+
+/* This moves the slider from its start (0%) to the end of the first set of logos (-50%) */
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* 2. The Container */
+
+
+/* This acts as the "window" and hides the parts of the slider that are off-screen */
+
+.sponsor-carousel-container {
+    width: 100%;
+    overflow: hidden;
+    /* This is essential */
+    padding: 20px 0;
+    margin-bottom: 10px;
+    border-top: 1px solid #444;
+    /* Optional: adds a nice separator */
+    border-bottom: 1px solid #444;
+}
+
+
+/* 3. The Slider */
+
+
+/* This is the "track" that holds all logos and gets animated */
+
+.sponsor-slider {
+    display: flex;
+    width: max-content;
+    /* Makes the slider as wide as all its content */
+    /* This applies the animation */
+    /* You can change '25s' to make it faster or slower */
+    animation: scroll 25s linear infinite;
+    /* this is used to make the animation sliding */
+}
+
+
+/* 4. The Logos */
+
+.sponsor-slider img {
+    height: 50px;
+    /* Adjust this to your logo size */
+    width: auto;
+    margin: 0 40px;
+    /* Space between logos */
+    /* Professional touch: make logos grayscale and semi-transparent */
+    filter: grayscale(1) opacity(0.7);
+    transition: all 0.3s ease;
+}
+
+
+/* 5. Hover Effects (Optional but recommended) */
+
+
+/* Pause the animation when the user hovers */
+
+.sponsor-slider:hover {
+    animation-play-state: paused;
+}
+
+
+/* Make the logo colorful and pop out on its own hover */
+
+.sponsor-slider img:hover {
+    filter: grayscale(0) opacity(1);
+    transform: scale(1.1);
+}
 
 
 /* === Smooth Scrolling === */
@@ -513,7 +1221,7 @@ html {
 
 .image-background {
     background-image: url('/assets/BG1.jpg');
-    /* TODO: Change this path */
+    /* todoChange this path */
     background-size: cover;
     /* Cover the entire screen */
     background-position: center;
@@ -757,7 +1465,14 @@ for about us page  === */
 .faq-container {
     width: 100%;
     max-width: 900px;
+    /* Limits the width */
     padding: 40px 20px;
+    /* Adds space inside the box */
+    /* --- THIS IS THE FIX --- */
+    margin-left: auto;
+    /* Pushes it away from the left */
+    margin-right: auto;
+    /* Pushes it away from the right */
 }
 
 .faq-container h1 {
@@ -829,7 +1544,8 @@ details p {
 }
 
 .chatbot-section h2 {
-    font-size: 2em;
+    /* FLUID TYPOGRAPHY */
+    font-size: clamp(1.4rem, 1.1rem + 2.5vw, 2em);
 }
 
 .chatbot-container {
@@ -880,6 +1596,9 @@ details p {
     outline: none;
 }
 
+
+/* This rule is now NOT overridden */
+
 .chat-input-area button {
     border: none;
     background-color: #e50914;
@@ -890,7 +1609,12 @@ details p {
     /* Charlie edits */
 }
 
-button {
+
+/* --- FIX --- 
+   Changed 'button' to 'nav button' to only target nav buttons 
+*/
+
+nav button {
     background-color: rgba(63, 61, 61, 0);
     /* Semi-transparent background */
     color: white;
@@ -899,7 +1623,12 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+
+/* --- FIX --- 
+   Changed 'button:hover' to 'nav button:hover' 
+*/
+
+nav button:hover {
     /*yeh jab hover karega tab jo selection box hoga vo thoda blur hoga */
     background-color: rgba(96, 92, 92, 0.447);
     transform: scale(1.2);
@@ -908,6 +1637,9 @@ button:hover {
     /* button jab enlarge hoga tab shadow dikhayega */
     cursor: pointer;
 }
+
+
+/* These rules are now NOT overridden */
 
 .btn-cta button {
     background-color: rgb(63, 61, 61, 0);

@@ -1,3 +1,4 @@
+<html>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cortex - Home</title>
-    <link rel="icon" href="/assets/LOGO1.png" type="image/png">
+    <link rel="icon" href="assets/LOGO1.png" type="image/png">
     <link rel="stylesheet" href="styles/style.css">
     <!-- this is connected to the folder for css -->
 
@@ -14,7 +15,7 @@
 <body>
 
     <div class="video-background">
-        <video muted autoplay loop id="background-video" src="/assets/game202.mp4"> <!--this is for the video which is the background t-->
+        <video muted autoplay loop id="background-video" src="/assets/landingvideo.mp4"> <!--this is for the video which is the background t-->
         Your browser does not support the video file.
     </video>
     </div>
@@ -24,8 +25,6 @@
 <div id="loader-wrapper">
     <div class="loader"></div>
 </div>
-
-</html>
 
 <header>
     <nav>
@@ -41,65 +40,75 @@
 
 
         <div class="nav-right">
+            <div class="server-status">
+                <span class="status-dot"></span> Server: Online
+            </div>
+
             <a href="/login.html" class="btn btn-login"><button>Login</button></a>
             <a href="/registration.html" class="btn btn-register"><button>Register</button></a>
         </div>
     </nav>
 </header>
 
-<main>
+<homepage-main>
     <section class="hover-content">
         <h1>Welcome to Our Gaming Community</h1>
         <p>The ultimate hub for gamers to connect, compete, and conquer together.</p>
         <a href="/registration.html" class="btn btn-cta"><button>Join The Fight!</button></a>
     </section>
-</main>
+</homepage-main>
+</section>
+<section class="discord-cta">
+    <div class="discord-content">
+        <h2>The Action Happens on Discord</h2>
+        <p>Join over 500+ active members right now. Find teammates, chat 24/7, and get instant updates on all our events.</p>
+        <a href="#" class="btn btn-discord">Join the Server</a>
+    </div>
+</section>
+<section class="stats-section">
+    <div class="stat-item">
+        <h3 class="stat-number" data-target="800">0</h3>
+        <p>Active Members</p>
+    </div>
+    <div class="stat-item">
+        <h3 class="stat-number" data-target="35">0</h3>
+        <p>Tournaments Hosted</p>
+    </div>
+    <div class="stat-item">
+        <h3 class="stat-number" data-target="20">0</h3>
+        <p>Active Teams</p>
+    </div>
+</section>
+<section class="testimonial-carousel">
+    <h2>What Our Members Say</h2>
 
+    <div class="carousel-slide active-slide">
+        <p>"This is the best community I've ever been a part of. Found a great team for Valorant!"</p>
+        <h4>- AnasK5</h4>
+    </div>
+
+    <div class="carousel-slide">
+        <p>"The tournaments are well-organized and the community is super helpful and non-toxic."</p>
+        <h4>- Saishah</h4>
+    </div>
+
+    <div class="carousel-slide">
+        <p>"Love the news and guides. I'm always learning something new here. 10/10."</p>
+        <h4>- Mayank</h4>
+    </div>
+</section>
 
 <p class="gap1">
-    <!--this is to make a gap between bg video and footer also this is is inline css -->
+    <!--this is to make a gap between bg video and footer -->
 </p>
-<footer class="site-footer">
-    <div class="footer-container">
 
-        <div class="back-to-top">
-            <a href="#top" class="top-link">▲ BACK TO TOP</a>
-        </div>
+<div id="cookie-placeholder"></div>
+<div id="footer-placeholder"></div>
 
-        <div class="footer-content-wrapper">
-            <div class="footer-about">
-                <h3>Cortex</h3>
-                <p>The ultimate hub for gamers to connect, compete, and conquer together. Join our forums and Discord to be a part of the action.</p>
-            </div>
-
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="about-us.html">About-Us</a></li>
-                    <li><a href="faqs.html">FAQs</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="#" aria-label="Discord">Discord</a>
-                    <a href="#" aria-label="Twitch">Twitch</a>
-                    <a href="#" aria-label="X (Twitter)">X</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 CORTEX All Rights Reserved. Built by UI NINJAs.</p>
-        </div>
-    </div>
-</footer>
-
+<!-- script is used to make a loading screen before the actual content goes on and etc-->
+<script src="scripts/main.js"></script>
 <script src="scripts/loader.js"></script>
-
+<script src="scripts/stats.js"></script>
 </body>
 
 </html>

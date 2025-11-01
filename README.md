@@ -1,8 +1,8 @@
 
-# 🎮 Cortex - Gaming Community Website
+# 🎮 CORTEX - Gaming Community Website
 
 
-This project is the front-end implementation of a Gaming Community Website. It was developed as a final assignment for the FRONT END DEVELOPMENT course at SHOOLINI UNIVERSITY.
+This project is the front-end implementation of a Gaming Community Website. It was developed as a final assignment for the [Course Name, e.g., CSC 301: Advanced Front-End Development] course at [University Name].
 
 The goal was to create a responsive, engaging, and accessible user interface, demonstrating proficiency in modern HTML, CSS, and JavaScript techniques, as well as an understanding of UI/UX principles for an interactive community platform.
 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Cortex</title>
+    <link rel="icon" href="/assets/LOGO1.png" type="image/png">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body id="top">
+
+    <header>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <h1>What's Your Gamer Archetype?</h1>
+            <p>Answer these questions to find your role in the community!</p>
+
+            <form id="quiz-form">
+
+                <div class="quiz-question">
+                    <label>In a team game, you are the one...</label>
+                    <div class="quiz-option"><input type="radio" name="q1" value="a" required> ...leading the charge.</div>
+                    <div class="quiz-option"><input type="radio" name="q1" value="b"> ...making the master plan.</div>
+                    <div class="quiz-option"><input type="radio" name="q1" value="c"> ...supporting your teammates.</div>
+                </div>
+
+                <div class="quiz-question">
+                    <label>You prefer a game that tests your...</label>
+                    <div class="quiz-option"><input type="radio" name="q2" value="a" required> ...reflexes and aim.</div>
+                    <div class="quiz-option"><input type="radio" name="q2" value="b"> ...patience and strategy.</div>
+                    <div class="quiz-option"><input type="radio" name="q2" value="c"> ...communication and teamwork.</div>
+                </div>
+
+                <div class="quiz-question">
+                    <label>You've just lost a tough match. You...</label>
+                    <div class="quiz-option"><input type="radio" name="q3" value="a" required> ...immediately queue for the next one.</div>
+                    <div class="quiz-option"><input type="radio" name="q3" value="b"> ...watch the replay to see what went wrong.</div>
+                    <div class="quiz-option"><input type="radio" name="q3" value="c"> ...say "gg" and go chat with friends.</div>
+                </div>
+
+                <button type="submit" class="btn">Find My Archetype!</button>
+            </form>
+
+            <div id="quiz-result" class="hidden">
+                <h2 id="result-title"></h2>
+                <p id="result-description"></p>
+                <button id="retake-quiz-btn" class="btn">Retake Quiz</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/quiz.js"></script>
+
+</body>
+
+</html>

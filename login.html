@@ -14,20 +14,19 @@
         <nav>
             <div class="nav-left">
                 <ul>
-                    <!--gave button tag to left nav items-->
                     <li><a href="/index.html"><button>Home</button></a></li>
-                    <li><a href="/about-us.html"><button>About Us </button></a></li>
+                    <!--yeh button tag add kiya hai hover ke liye-->
+                    <li><a href="/about-us.html"><button>About Us</button></a></li>
                     <li><a href="/newsletter.html"><button>News</button></a></li>
                     <li><a href="/faqs.html"><button>FAQs</button></a></li>
                 </ul>
             </div>
 
-            <!-- removed right nav —charlie -->
-
-        </nav>
     </header>
 
-
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
 
     <div class="video-background">
         <video autoplay muted loop id="background-video" src="/assets/loginbg.mp4">
@@ -35,11 +34,11 @@
         </video>
     </div>
 
-    <main>
+    <homepage-main>
         <div class="login-container">
             <h1>Welcome Back!</h1>
 
-            <form action="#" method="POST">
+            <form action="#" method="get">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
@@ -57,45 +56,14 @@
                 Don't have an account? <a href="registration.html">Register</a>
             </p>
         </div>
-    </main>
-    <footer class="site-footer">
-        <div class="footer-container">
-
-            <div class="back-to-top">
-                <a href="#top" class="top-link">▲ BACK TO TOP</a>
-            </div>
-
-            <div class="footer-content-wrapper">
-                <div class="footer-about">
-                    <h3>Cortex</h3>
-                    <p>The ultimate hub for gamers to connect, compete, and conquer together. Join our forums and Discord to be a part of the action.</p>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="news.html">News</a></li>
-                        <li><a href="about-us.html">About-Us</a></li>
-                        <li><a href="faqs.html">FAQs</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-social">
-                    <h4>Follow Us</h4>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Discord">Discord</a>
-                        <a href="#" aria-label="Twitch">Twitch</a>
-                        <a href="#" aria-label="X (Twitter)">X</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 CORTEX All Rights Reserved. Built by UI NINJAs.</p>
-            </div>
-        </div>
-    </footer>
+    </homepage-main>
+    <p class="gap1">
+        <!--this is to make a gap between bg video and footer also this is is inline css -->
+        <div id="footer-placeholder"></div>
+        <!-- script is used to make a loading screen before the actual content goes on and etc-->
+        <script src="scripts/main.js"></script>
+        <script src="scripts/loader.js"></script>
+        <script src="scripts/login.js"></script>
 </body>
 
 </html>
