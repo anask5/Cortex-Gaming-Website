@@ -8,7 +8,7 @@ The goal was to create a responsive, engaging, and accessible user interface, de
 
 ## Authors
 
-- [@anaskhan](#)
+- [@anaskhan](https://github.com/anask5/)
 - [@aryan](#)
 - [@suryansh](#)
 - [@mayank](#)
@@ -18,18 +18,16 @@ The goal was to create a responsive, engaging, and accessible user interface, de
 
 ## Features
 
-✨ Features
 
+- Live Previews 
 
-- Live Previews (e.g., of news posts or tournament bracket updates)
-
-- Fullscreen Mode (e.g., for viewing embedded streams or galleries)
+- Fullscreen Mode 
 
 - Cross-Platform/Mobile Responsiveness
 
 - Sticky Navigation Header
 
-- Animated Statistics Counter (for Active Members, Tournaments, etc.)
+- Animated Statistics Counter
 
 - Smooth Scroll "Back to Top" Button
 
@@ -37,21 +35,21 @@ The goal was to create a responsive, engaging, and accessible user interface, de
 
 - Discord Server Widget Integration
 
-- Image Gallery/Carousel Component (for showcasing tournament highlights)
-
-- Copy-to-Clipboard Functionality (for Discord link or team IDs)
-
+- Image Gallery/Carousel Component
+- 
+- Copy-to-Clipboard Functionality
+- 
 - Subtle Parallax Effect on the Hero section
 
-- Responsive Layout: Full compatibility across desktop, tablet, and mobile devices (using CSS Grid and Flexbox).
+- Responsive Layout: Full compatibility across desktop, tablet, and mobile devices 
 
-- Dynamic Content Filtering: Interactive filtering of forum posts or game categories using vanilla JavaScript (or a framework like React/Vue).
+- Dynamic Content Filtering: Interactive filtering of forum posts or game categories using vanilla JavaScript
 
 - User Authentication Flow: Placeholder/Mockup pages for Login and Sign-up interfaces.
 
 - Modern UI/UX: Implementation of a dark theme, custom typography, and hover effects appropriate for a gaming audience.
 
-- Component-Based Design: (If using a framework) Structure built using reusable components for elements like navigation bars, cards, and modals.
+- Component-Based Design
 
 
 ## License
