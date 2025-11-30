@@ -1,0 +1,22 @@
+{
+  "name": "cortex-gaming-website",
+  "version": "1.0.0",
+  "description": "Front-end implementation of a gaming community website for Shoolini University final assignment.",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "gaming",
+    "community"
+  ],
+  "author": "Anas Khan",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
