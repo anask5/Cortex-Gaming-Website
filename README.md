@@ -1,4 +1,4 @@
-[![Vercel Deployment Status](https://vercel.com/anask5/cortex-gaming-website/status)](https://vercel.com/anask5/cortex-gaming-website)
+[![Vercel Deployment Status](https://vercel.com/api/github/deployments/anask5/Cortex-Gaming-Website/status)](https://vercel.com/anask5/Cortex-Gaming-Website)
 # 🎮 CORTEX - Gaming Community Website
 
 
