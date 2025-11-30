@@ -26,7 +26,7 @@ Click here to view the live, deployed version of the website:
 This project was built using the following core technologies, emphasizing modern web standards and performance:
 
 * **Markup:** HTML5 (Semantic Structure)
-* **Styling:** CSS3 (Flexbox/Grid), SASS/SCSS *(If used, otherwise state "Vanilla CSS")*
+* **Styling:** CSS3 (Flexbox/Grid)
 * **Interactivity:** Vanilla JavaScript (ES6+), DOM manipulation
 * **Deployment:** Vercel (Utilizing their Global Edge Network for fast delivery)
 * **Tooling:** VS Code, Git/GitHub
