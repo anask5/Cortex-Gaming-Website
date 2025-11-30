@@ -1,10 +1,16 @@
-[![Vercel Deployment Status](https://vercel.com/anask5/cortex-gaming-website/status)](https://vercel.com/anas-khans-projects-be5ee1cf/cortex-gaming-website)
+
 # 🎮 CORTEX - Gaming Community Website
 
 
 This project is the front-end implementation of a Gaming Community Website. It was developed as a final assignment for the  Front-End Development course at Shoolini University.
 
 The goal was to create a responsive, engaging, and accessible user interface, demonstrating proficiency in modern HTML, CSS, and JavaScript techniques, as well as an understanding of UI/UX principles for an interactive community platform.
+
+## 🔗 Live Demo
+
+Click here to view the live, deployed version of the website:
+
+[**Visit Cortex Gaming Website**](https://cortex-gaming-website.vercel.app/)
 
 ## Authors
 
@@ -14,6 +20,19 @@ The goal was to create a responsive, engaging, and accessible user interface, de
 - [@mayank](#)
 - [@saishah](#)
 
+## 💻 Tech Stack & Architecture
+
+This project was built using the following core technologies, emphasizing modern web standards and performance:
+
+* **Markup:** HTML5 (Semantic Structure)
+* **Styling:** CSS3 (Flexbox/Grid), SASS/SCSS *(If used, otherwise state "Vanilla CSS")*
+* **Interactivity:** Vanilla JavaScript (ES6+), DOM manipulation
+* **Deployment:** Vercel (Utilizing their Global Edge Network for fast delivery)
+* **Tooling:** VS Code, Git/GitHub
+
+### Architecture
+
+The project utilizes a **Component-Based Design** approach, separating the UI into reusable modules (e.g., Header, Stats Card, Footer) for maintainability and scalability. Critical focus was placed on **optimizing the Critical Rendering Path** to ensure high performance scores and quick load times.
 
 
 ## Features
@@ -52,7 +71,42 @@ The goal was to create a responsive, engaging, and accessible user interface, de
 - Component-Based Design
 
 
+## ⚙️ Getting Started (Local Setup)
+
+Follow these steps to get a local copy of the project running on your machine:
+
+### Prerequisites
+
+* A modern web browser (Chrome, Firefox, Edge)
+* Git installed on your system
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/anask5/Cortex-Gaming-Website.git](https://github.com/anask5/Cortex-Gaming-Website.git)
+    ```
+2.  **Navigate to the project directory:**
+    ```bash
+    cd Cortex-Gaming-Website
+    ```
+3.  **Run the site:**
+    Since this is a static project, simply open the `index.html` file in your preferred browser, or use a local server extension (like Live Server in VS Code) for best results.
+    ```bash
+    # Recommended: Use 'live-server' if installed globally
+    live-server
+    ```
+
+    ## 🤝 Project Management & Contribution
+
+This project utilized a collaborative approach with clear roles defined for design, development, and quality assurance.
+
+* **Workflow:** We followed an adapted **Agile methodology** using weekly goals to track progress and manage feature implementation.
+* **Version Control:** All development was managed via **Git** and hosted on **GitHub**, utilizing feature branches before merging into the `main` branch.
+* **Quality Assurance (QA):** The Junior Developer and Lead Developer collaborated on **Cross-Browser/Device Testing** to ensure feature parity and responsiveness across different environments.
+
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
