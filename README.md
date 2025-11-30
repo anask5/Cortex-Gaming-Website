@@ -11,6 +11,8 @@ The goal was to create a responsive, engaging, and accessible user interface, de
 Click here to view the live, deployed version of the website:
 
 [**Visit Cortex Gaming Website**](https://cortex-gaming-website.vercel.app/)
+![Uploading landing page.png…]()
+
 
 ## Authors
 
