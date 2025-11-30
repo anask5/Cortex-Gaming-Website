@@ -1,4 +1,4 @@
-
+[![Vercel Deployment Status](https://vercel.com/api/github/deployments/prj_zDyNnO5jmTN7ZfF3wo5ce4FDMVqi/status)](https://vercel.com/your-username/your-project-name)
 # 🎮 CORTEX - Gaming Community Website
 
 
