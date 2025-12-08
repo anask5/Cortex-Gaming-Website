@@ -35,7 +35,7 @@
   "redirects": [
     {
       "source": "/old-forums",
-      "destination": "https://discord.gg/your-cortex-invite",
+      "destination": "https://discord.gg/#",
       "permanent": true
     }
   ],
@@ -43,7 +43,8 @@
   "rewrites": [
     {
       "source": "/api/status",
-      "destination": "https://[YOUR_BACKEND_SERVER]/api/v1/game-status"
+      "destination": "https://#/api/v1/game-status"
     }
   ]
 }
+
