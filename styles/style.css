@@ -1466,47 +1466,28 @@ nav button:hover {
     /* button jab enlarge hoga tab shadow dikhayega */
     cursor: pointer;
 }
-
-
-/* These rules are now NOT overridden */
-
-.btn-cta button {
-    background-color: rgb(63, 61, 61, 0);
-    /* Semi-transparent background */
-    color: white;
-    border: solid white 2px;
-    /* Border color change karna hai*/
-    border-radius: 10px;
-    padding: 10px 40px;
-    cursor: pointer;
-}
-
-.btn-cta button:hover {
-    background-color: rgba(96, 92, 92, 0.447);
-    /*color baad me decide karna bur ka*/
-    transform: scale(1.05);
-    /* hover karne pae enlarge hoga */
-    box-shadow: 0 4px 8px rgba(9, 0, 0, 1);
-    /* button jab enlarge hoga tab shadow dikhayega */
-}
-
-
-/* === Screen Size Warning (MINIMAL FIX) === */
+/* === Screen Size Warning (FINAL, BLOCKING VERSION) === */
 
 #screen-warning {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(0, 0, 0, 0.85);
     display: none;
-    /* JS will turn this on */
     align-items: center;
     justify-content: center;
-    z-index: 10000;
+    z-index: 999999;
+    pointer-events: all;
+    touch-action: none;
 }
 
+body.warning-open {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+/* popup box */
 .screen-warning-box {
     background: rgba(0, 0, 0, 0.75);
     border-left: 5px solid #e50914;
@@ -1518,16 +1499,19 @@ nav button:hover {
     color: white;
 }
 
+/* heading */
 .screen-warning-box h2 {
     font-family: 'font1', sans-serif;
     margin-bottom: 12px;
 }
 
+/* text */
 .screen-warning-box p {
     color: #ccc;
     margin-bottom: 20px;
 }
 
+/* button */
 .screen-warning-box button {
     background-color: #e50914;
     border: none;
@@ -1535,4 +1519,11 @@ nav button:hover {
     color: white;
     font-weight: bold;
     cursor: pointer;
+    border-radius: 6px;
 }
+
+/* button hover (desktop only, harmless on mobile) */
+.screen-warning-box button:hover {
+    opacity: 0.9;
+}
+

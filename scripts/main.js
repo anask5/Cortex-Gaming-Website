@@ -101,29 +101,3 @@
       // --- END: Glow Card Effect ---
 
   });
-
-  const MIN_WIDTH = 1024;
-  const warning = document.getElementById("screen-warning");
-  const continueBtn = document.getElementById("continue-btn");
-
-  function shouldShowWarning() {
-      return (
-          window.innerWidth < MIN_WIDTH &&
-          !localStorage.getItem("screenWarningDismissed")
-      );
-  }
-
-  function showWarning() {
-      warning.style.display = "flex";
-  }
-
-  function hideWarning() {
-      warning.style.display = "none";
-      localStorage.setItem("screenWarningDismissed", "true");
-  }
-
-  if (shouldShowWarning()) {
-      showWarning();
-  }
-
-  continueBtn.addEventListener("click", hideWarning);
