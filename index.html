@@ -1,4 +1,3 @@
-<html>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,114 +21,120 @@
     <!-- this is connected to the folder for css -->
 
 </head>
+
 <body>
-<div id="screen-warning" class="screen-warning">
-    <div class="screen-warning-box">
-        <h2>Best Viewed on Larger Screens</h2>
-        <p>
-            This website is optimized for laptops and desktops. For the best experience, please use a larger screen.
-        </p>
-        <button id="continue-btn">Continue Anyway</button>
+    <div id="screen-warning" class="screen-warning">
+        <div class="screen-warning-box">
+            <h2>Best Viewed on Larger Screens</h2>
+            <p>
+                This website is optimized for laptops and desktops. For the best experience, please use a larger screen.
+            </p>
+            <button id="continue-btn">Continue Anyway</button>
+        </div>
     </div>
-</div>
+
     <div class="video-background">
-        <video muted autoplay loop id="background-video" src="/assets/landingvideo.mp4"> <!--this is for the video which is the background t-->
-        Your browser does not support the video file.
+        <video id="background-video" muted autoplay loop playsinline preload="none" poster="/assets/landing-poster.jpg">
+
+        <source src="/assets/landingvideo.webm" type="video/webm">
+        <source src="/assets/landingvideo.mp4" type="video/mp4">
+
+        Your browser does not support the video tag.
     </video>
     </div>
 
-</body>
-
-<div id="loader-wrapper">
-    <div class="loader"></div>
-</div>
-
-<header>
-    <nav>
-        <div class="nav-left">
-            <ul>
-                <li><a href="/index.html"><button>Home</button></a></li>
-                <!--yeh button tag add kiya hai hover ke liye-->
-                <li><a href="/about-us.html"><button>About Us</button></a></li>
-                <li><a href="/newsletter.html"><button>News</button></a></li>
-                <li><a href="/faqs.html"><button>FAQs</button></a></li>
-            </ul>
-        </div>
 
 
-        <div class="nav-right">
-            <div class="server-status">
-                <span class="status-dot"></span> Server: Online
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="nav-left">
+                <ul>
+                    <li><a href="/index.html"><button>Home</button></a></li>
+                    <!--yeh button tag add kiya hai hover ke liye-->
+                    <li><a href="/about-us.html"><button>About Us</button></a></li>
+                    <li><a href="/newsletter.html"><button>News</button></a></li>
+                    <li><a href="/faqs.html"><button>FAQs</button></a></li>
+                </ul>
             </div>
 
-            <a href="/login.html" class="btn btn-login"><button>Login</button></a>
-            <a href="/registration.html" class="btn btn-register"><button>Register</button></a>
-        </div>
-    </nav>
-</header>
 
-<homepage-main>
-    <section class="hover-content">
-        <h1>Welcome to Our Gaming Community</h1>
-        <p>The ultimate hub for gamers to connect, compete, and conquer together.</p>
-        <a href="/registration.html" class="btn btn-cta"><button>Join The Fight!</button></a>
+            <div class="nav-right">
+                <div class="server-status">
+                    <span class="status-dot"></span> Server: Online
+                </div>
+
+                <a href="/login.html" class="btn btn-login"><button>Login</button></a>
+                <a href="/registration.html" class="btn btn-register"><button>Register</button></a>
+            </div>
+        </nav>
+    </header>
+
+    <homepage-main>
+        <section class="hover-content">
+            <h1>Welcome to Our Gaming Community</h1>
+            <p>The ultimate hub for gamers to connect, compete, and conquer together.</p>
+            <a href="/registration.html" class="btn btn-cta"><button>Join The Fight!</button></a>
+        </section>
+    </homepage-main>
     </section>
-</homepage-main>
-</section>
-<section class="discord-cta">
-    <div class="discord-content">
-        <h2>The Action Happens on Discord</h2>
-        <p>Join over 500+ active members right now. Find teammates, chat 24/7, and get instant updates on all our events.</p>
-        <a href="#" class="btn btn-discord">Join the Server</a>
-    </div>
-</section>
-<section class="stats-section">
-    <div class="stat-item">
-        <h3 class="stat-number" data-target="800">0</h3>
-        <p>Active Members</p>
-    </div>
-    <div class="stat-item">
-        <h3 class="stat-number" data-target="35">0</h3>
-        <p>Tournaments Hosted</p>
-    </div>
-    <div class="stat-item">
-        <h3 class="stat-number" data-target="20">0</h3>
-        <p>Active Teams</p>
-    </div>
-</section>
-<section class="testimonial-carousel">
-    <h2>What Our Members Say</h2>
+    <section class="discord-cta">
+        <div class="discord-content">
+            <h2>The Action Happens on Discord</h2>
+            <p>Join over 500+ active members right now. Find teammates, chat 24/7, and get instant updates on all our events.</p>
+            <a href="#" class="btn btn-discord">Join the Server</a>
+        </div>
+    </section>
+    <section class="stats-section">
+        <div class="stat-item">
+            <h3 class="stat-number" data-target="800">0</h3>
+            <p>Active Members</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="stat-number" data-target="35">0</h3>
+            <p>Tournaments Hosted</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="stat-number" data-target="20">0</h3>
+            <p>Active Teams</p>
+        </div>
+    </section>
+    <section class="testimonial-carousel">
+        <h2>What Our Members Say</h2>
 
-    <div class="carousel-slide active-slide">
-        <p>"This is the best community I've ever been a part of. Found a great team for Valorant!"</p>
-        <h4>- AnasK5</h4>
-    </div>
+        <div class="carousel-slide active-slide">
+            <p>"This is the best community I've ever been a part of. Found a great team for Valorant!"</p>
+            <h4>- AnasK5</h4>
+        </div>
 
-    <div class="carousel-slide">
-        <p>"The tournaments are well-organized and the community is super helpful and non-toxic."</p>
-        <h4>- Saishah</h4>
-    </div>
+        <div class="carousel-slide">
+            <p>"The tournaments are well-organized and the community is super helpful and non-toxic."</p>
+            <h4>- Saishah</h4>
+        </div>
 
-    <div class="carousel-slide">
-        <p>"Love the news and guides. I'm always learning something new here. 10/10."</p>
-        <h4>- Mayank</h4>
-    </div>
-</section>
+        <div class="carousel-slide">
+            <p>"Love the news and guides. I'm always learning something new here. 10/10."</p>
+            <h4>- Mayank</h4>
+        </div>
+    </section>
 
-<p class="gap1">
-    <!--this is to make a gap between bg video and footer -->
-</p>
+    <p class="gap1">
+        <!--this is to make a gap between bg video and footer -->
+    </p>
 
-<div id="cookie-placeholder"></div>
-<div id="footer-placeholder"></div>
+    <div id="cookie-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
 
-<!-- script is used to make a loading screen before the actual content goes on and etc-->
-<script src="scripts/main.js"></script>
-<script src="scripts/loader.js"></script>
-<script src="global-footer.js"></script>
-<script src="scripts/stats.js"></script>
-<script src="scripts/mobile.js"></script>
+    <!-- script is used to make a loading screen before the actual content goes on and etc-->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/loader.js"></script>
+    <script src="global-footer.js"></script>
+    <script src="scripts/stats.js"></script>
+    <script src="scripts/mobile.js"></script>
 </body>
 
 </html>
