@@ -180,7 +180,11 @@ h3 {
 html {
     scroll-behavior: smooth;
     /* ADD YOUR CURSOR CODE HERE */
-    cursor: url('/assets/arrowhead.svg'), auto;
+    cursor: url('/assets/mouse.cur') 16 16, auto;
+}
+
+* {
+    cursor: url('../assets/mouse.cur'), pointer;
 }
 
 
